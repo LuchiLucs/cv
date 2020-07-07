@@ -11,10 +11,10 @@
 %\usepackage{showframe}
 \usepackage[a4paper,
 			includeheadfoot,
-			top = 0in,
-			bottom = 0in,
-			left = 1in,
-			right = 1in]{geometry}
+			top = 0cm,
+			bottom = 1cm,
+			left = 1cm,
+			right = 1cm]{geometry}
 
 % interpreters
 \usepackage[utf8]{inputenc}
@@ -27,13 +27,15 @@
 % font
 \usepackage{libertine}
 \usepackage{courier}
-\usepackage{fontawesome}
-% \usepackae{helvet}
 
 % Paragraph indentation: empty line rather than an indent
 \usepackage[parfill]{parskip}
 
 \usepackage{booktabs}
+
+\usepackage{enumitem}
+\setlist[enumerate,1]{label=$\vcenter{\hbox{\tiny$\bullet$}}$,leftmargin=*}
+
 \usepackage[dvipsnames]{xcolor}
 \usepackage[allbordercolors = red,
 			colorlinks = true,
@@ -42,121 +44,110 @@
             citecolor = BrickRed,
             anchorcolor = BrickRed]{hyperref}
 
-\newcommand{\cvsection}[1]{\section*{\centering\normalsize\uppercase{#1}}\vspace{-16pt}\rule{\linewidth}{0.2pt}}
+\newcommand{\cvsection}[1]{\section*{\centering\normalsize\uppercase{#1}}\vspace{-16pt}\rule{\linewidth}{0.2pt}\vspace{6pt}}
 
 \begin{document}
-
 % empty header and footer
 % https://tex.stackexchange.com/questions/194423/page-style-plain-vs-empty
-\pagestyle{empty}
-
+% \pagestyle{empty}
 %----------------------------------------------------------------------------------------
-%	PERSONAL DATA
+%	TITLE PAGE: PERSONAL DATA
 %----------------------------------------------------------------------------------------
-
-% switch to center alighment
 \centering
-{\huge\textbf{Luca~Maurelli}}
+{\huge\textsc{Luca~Maurelli's~Curriculum~Vitae}\par}
+{\textsc{Updated:~}\today\par}
+\raggedright
+\vspace{1cm}
+%----------------------------------------------------------------------------------------
+%   BODY 
+%----------------------------------------------------------------------------------------
 
-
-% \begin{align*}
-%     \text{\faMobilePhone}	& \text{~\href{tel:+393408192088}{+393408192088}} \\
-%     \text{\faSend}			& \text{~\href{mailto:luca.maurelli@unibg.it}{luca.maurelli@unibg.it}} \\
-%     \text{\faHome} 			& \text{~\href{https://goo.gl/maps/qSb6hkSyAdgnEt5w7}{Treviglio~(BG),~24047,~Italy}}
-% \end{align*}
-
-
-\begin{table}[h]
-	\centering
+\noindent
+\begin{minipage}[t]{.5\textwidth}
+	\raggedright
 	\begin{tabular}{@{}ll@{}}
-		 \faPhone & \href{tel:+393408192088}{+393408192088} \\
-		 \faAt & \href{mailto:luca.maurelli@unibg.it}{luca.maurelli@unibg.it} \\
-		 \faHome & \href{https://goo.gl/maps/qSb6hkSyAdgnEt5w7}{Treviglio~(BG),~24047,~Italy}
+	date of birth: & June 30, 1993 \\
+	phone number: & \href{tel:+393408192088}{(+39)~340~8192088} \\
+	e-mail: & \href{mailto:luca.maurelli@unibg.it}{luca.maurelli@unibg.it} \\
+	location: & \href{https://goo.gl/maps/qSb6hkSyAdgnEt5w7}{Treviglio~(BG),~24047,~Italy}
 	\end{tabular}
-\end{table}
-
-% \faMobilePhone ~\href{tel:+393408192088}{+393408192088}
-% \vspace{-3pt}
-
-% \faSend ~\href{mailto:luca.maurelli@unibg.it}{luca.maurelli@unibg.it}
-% \vspace{-3pt}
-
-% \faHome ~\href{https://goo.gl/maps/qSb6hkSyAdgnEt5w7}{Via~Giovanni~da~Verrazzano,~68,~Treviglio~(BG),~24047,~Italy}
-% \faHome ~\href{geo:45.53509,9.59758?z=19}{Via~Giovanni~da~Verrazzano,~68,~Treviglio~(BG),~24047,~Italy}
-
-% switch to left alighment
-\flushleft
+\end{minipage}% note the use of "%"
+\begin{minipage}[t]{.5\textwidth}
+	\raggedleft
+	ciao ciao \\ 
+	prova \\
+	ciao
+\end{minipage}
 
 %----------------------------------------------------------------------------------------
 %	ACTUAL WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
-
 \cvsection{current position}
 
-\textbf{Ph.D. Student} at the \href{https://disa.unibg.it/}{Department of Engineering and Applied Sciences}\\
-University of Bergamo \hfill Oct 2019 – Present
+\noindent
+\begin{minipage}[t]{.8\textwidth}
+	\textbf{Ph.D. Student} at the \href{https://disa.unibg.it/}{Department of Engineering and Applied Sciences} \\
+	University of Bergamo
+\end{minipage}% note the use of "%"
+\hfill\vrule\hfill
+\begin{minipage}[t]{.16\textwidth}
+	\raggedleft
+	Oct 2019 – Present
+\end{minipage}
 
 %----------------------------------------------------------------------------------------
 %	PREVIOUS WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
-
 \cvsection{previous position}
 
-\textbf{Research Assistant} at the \href{https://digip.unibg.it/}{Department of Management, Information and Production Engineering}\\
-University of Bergamo \hfill May 2018 – Sep 2019
-\begin{itemize}
-  	\setlength\itemsep{-0.5em}
-	\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-  	\item Project SMART4CPPS, funded by Regione Lombardia, led by 4 OdR and 10 local companies.
-  	\vspace{-6pt}
-  	\begin{itemize}
-  		\setlength\itemsep{-0.5em}
-  		\item Management activity of Pilot 1 and Pilot 4
-		\item Pilot 1: Design of a health monitoring system for electromechanical actuators (University of Bergamo, Camozzi)
-		\item Pilot 4: Machine learning algorithms for the zero-defect end-of-line tuning of medium-voltage switches (University of Bergamo, Cosberg, ABB, CNR)
-	\end{itemize}
-
-	\item Project CRYOABLATION:
-  	\vspace{-6pt}
-  	\begin{itemize}
-  		\setlength\itemsep{-0.5em}
-		\item Model identification of the temperature dynamics in \textit{cryoblation} for atrial fibrillation therapy (Dipartimento di Cardiologia, Ospedale di Seriate)
-	\end{itemize}
-
-	\item Project SP@RK-4.0-I.E.S.:
-	 \vspace{-6pt}
-  	\begin{itemize}
-  		\setlength\itemsep{-0.5em}
-		\item Data analysis and development of a health monitoring and predictive maintenance system in high performance workcenters (Mandelli spa)
-	\end{itemize}
-
-	\item Project SMI-PREDICTIVE MAINTENANCE:
-  	\vspace{-6pt}
-  	\begin{itemize}
-  		\setlength\itemsep{-0.5em}
-		\item Design of a predictive maintenance system for beverage packaging machines using accelerometers (SMI Group)
-	\end{itemize}
-\end{itemize}
+\noindent
+\begin{minipage}[t]{.8\textwidth}
+	\raggedright
+	\textbf{Research Assistant} at the \href{https://digip.unibg.it/}{Department of Management, Information and Production Engineering}\\
+	University of Bergamo
+	\vspace{6pt}
+	\begin{enumerate}
+		\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+		\item Project SMART4CPPS, funded by Regione Lombardia, led by 4 OdR and 10 local companies.
+		\begin{itemize}
+			\item Management activity of Pilot 1 and Pilot 4
+			\item Pilot 1: Design of a health monitoring system for electromechanical actuators (University of Bergamo, Camozzi)
+			\item Pilot 4: Machine learning algorithms for the zero-defect end-of-line tuning of medium-voltage switches (University of Bergamo, Cosberg, ABB, CNR)
+		\end{itemize}
+		\item Project CRYOABLATION:
+		\begin{itemize}
+			\item Model identification of the temperature dynamics in \textit{cryoblation} for atrial fibrillation therapy (Dipartimento di Cardiologia, Ospedale di Seriate)
+		\end{itemize}
+		\item Project SP@RK-4.0-I.E.S.:
+		\begin{itemize}
+			\item Data analysis and development of a health monitoring and predictive maintenance system in high performance workcenters (Mandelli spa)
+		\end{itemize}
+		\item Project SMI-PREDICTIVE MAINTENANCE:
+		\begin{itemize}
+			\item Design of a predictive maintenance system for beverage packaging machines using accelerometers (SMI Group)
+		\end{itemize}
+  \end{enumerate}
+\end{minipage}% note the use of "%"
+\hfill\vrule\hfill
+\begin{minipage}[t]{.16\textwidth}
+	\raggedleft
+	May 2018 – Sep 2019
+\end{minipage}
 
 %----------------------------------------------------------------------------------------
 \vspace{6pt} % Gap between titles
 %----------------------------------------------------------------------------------------
-
 \textbf{Software Engineer} at Consortium Intellimech\\
 \href{https://www.linkedin.com/company/kilometro-rosso/}{Kilometro Rosso} \hfill Oct 2017 – Apr 2018
 \begin{itemize}
   	\setlength\itemsep{-0.5em}
 	\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
 	\item Project KNOWLEDGIZE, funded by Regione Lombardia, led by Consortium Intellimech, with 2 OdR and 3 local companies.
 	\vspace{-6pt}
   	\begin{itemize}
   		\setlength\itemsep{-0.5em}
 		\item Development of a Knowledge Management Web Platform with an Innovative ML Algorithm based on Tag Searching using Django and Google Services (University of Bergamo, University of Brescia, Cosberg, Elettrocablaggi, Vin Service)
 	\end{itemize}
-
-	
 	\item Development of software applications:
 	\vspace{-6pt}
   	\begin{itemize}
@@ -164,7 +155,6 @@ University of Bergamo \hfill May 2018 – Sep 2019
 		\item Push-bottom panel for testing procedures on PLC in C\#
 		\item Monitoring system using industrial communicating protocols MQTT, MTCONNECT, UPC-UA and MODbus in Python
 	\end{itemize}
-
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
@@ -172,63 +162,69 @@ University of Bergamo \hfill May 2018 – Sep 2019
 %----------------------------------------------------------------------------------------
 
 \cvsection{education}
-
-\textit{Master's degree cum laude in Computer Science} \hfill 110L\slash100\\
-University of Bergamo, Italy \hfill Mar 2018
-\vspace{-3pt}
-\begin{quote}
-	\textit{Development of a Knowledge Management Web Platform with an Innovative ML Algorithm based on Tag Searching}
-\end{quote}
+\textbf{Master's degree cum laude in Computer Science}, University of Bergamo, Italy \hfill 110L\slash100 \\
+\textit{Development of a Knowledge Management Web Platform with an Innovative ML Algorithm based on Tag Searching} \hfill Mar 2018
 
 %----------------------------------------------------------------------------------------
 \vspace{6pt} % Gap between titles
 %----------------------------------------------------------------------------------------
 
-\textit{Bachelor's degree in Computer Science}\hfill 105\slash100\\
-University of Bergamo, Italy \hfill Sep 2015
-\vspace{-3pt}
-\begin{quote}
-	\textit{Development of a library for Mobile Robot Trajectory Control}
-\end{quote}
+\textbf{Bachelor's degree in Computer Science}, University of Bergamo, Italy\hfill 105\slash100 \\
+\textit{Development of a library for Mobile Robot Trajectory Control} \hfill Sep 2015
 
+%----------------------------------------------------------------------------------------
+%	NEW PAGE
+%----------------------------------------------------------------------------------------
 \clearpage
+
 %----------------------------------------------------------------------------------------
 %	POST-GRADUATE EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
 \cvsection{post-graduate education}
-
 Ph.D. \textbf{Courses} in:
 \begin{itemize}	
-	\setlength\itemsep{-3pt}
+	\setlength\itemsep{-12pt}
 	\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
-	\item \textit{Nonlinear System Identification}\\
+	\item \textit{Nonlinear System Identification} \\
 	% https://scholar.google.it/citations?user=nB_7svEAAAAJ
 	% https://scholar.google.it/citations?user=-TGDzikAAAAJ
 	% https://scholar.google.it/citations?user=rUj9gRgAAAAJ
-	% https://scholar.google.it/citations?user=wcXdcwEAAAAJ
-	\textbf{Proff. Luigi Piroddi, Simone Formentin, Simone Garatti, Lorenzo Fagiano and others}\\
-	Politecnico of Milan, Italy \hfill 48h, Jan 2019\\
+	% https://scholar.google.it/citations?user=wcXdcwEAAAAJ 
+	\textbf{Proff. L. Piroddi, S. Formentin, S. Garatti, G. Panzani and L. Fagiano}\\
+	Politecnico of Milan, Italy \hfill 48h, Jan 2019 \\
 	\item \textit{Model based Fault Diagnosis using a MATLAB Linear Framework}\\
-	\textbf{Proff. Andreas Varga and Daniel Ossmann}\\
+	\textbf{Proff. A. Varga and D. Ossmann}\\
 	University of Padova, Italy \hfill 48h, Mar 2019\\
-	\item \textit{Optimization Models and Algorithms}\\
-	\textbf{Prof. Maria Teresa Vespucci}\\
+	\item \textit{Optimization Models and Algorithms} \\
+	\textbf{Prof. M. T. Vespucci}\\
 	University of Bergamo, Italy \hfill 24h, Jul 2019\\
 	\item \textit{Advanced Mathematical Methods for Engineering}\\
-	\textbf{Proff. Marco Pedroni and Andrea Raimondo}\\
+	\textbf{Proff. M. Pedroni and A. Raimondo}\\
 	University of Bergamo, Italy \hfill 24h, Oct 2019\\
 	\item \textit{Advanced Numerical Methods for Engineering}\\
-	\textbf{Prof. Christian Vergara}\\
+	\textbf{Prof. C. Vergara}\\
 	University of Bergamo, Italy \hfill 20h, Nov 2019\\
 	\item \textit{Noise and Vibration Control Engineering}\\
 	% https://scholar.google.it/citations?user=-h6RUBsAAAAJ
-	\textbf{Prof. Nicolaas B. Roozen}\\
+	\textbf{Prof. N. B. Roozen}\\
 	University of Brescia, Italy \hfill 15h, Nov 2019\\
 	\item \textit{Statistical Signal Processing in Engineering}\\
-	\textbf{Prof. Umberto Spagnolini}\\
+	\textbf{Prof. U. Spagnolini}\\
 	Politecnico of Milan, Italy \hfill 26h, Jan 2020\\
-	
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+\vspace{6pt} % Gap between titles
+%----------------------------------------------------------------------------------------
+
+Ph.D. \textbf{Schools} in:
+\begin{itemize}
+	\setlength\itemsep{-3pt}
+	\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+	\item \textit{RegML2020 -- Regularization Methods for Machine Learning}\\
+	\textbf{Prof. L. Rosasco}\\
+	University of Genova, Italy \hfill 19h, Jun 2020\\
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
@@ -236,7 +232,7 @@ Ph.D. \textbf{Courses} in:
 %----------------------------------------------------------------------------------------
 
 Ph.D. \textbf{Seminars} in:
-\begin{itemize}	
+\begin{itemize}
 	\setlength\itemsep{-3pt}
 	\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 	\item \textit{Optimization and control of airborne wind energy systems}\\
