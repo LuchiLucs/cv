@@ -32,9 +32,11 @@
 \usepackage[parfill]{parskip}
 
 \usepackage{booktabs}
+\usepackage{graphicx}
 
 \usepackage{enumitem}
 \setlist[enumerate,1]{label=$\vcenter{\hbox{\tiny$\bullet$}}$,leftmargin=*}
+\setlist[enumerate,2]{label=--,leftmargin=*}
 
 \usepackage[dvipsnames]{xcolor}
 \usepackage[allbordercolors = red,
@@ -66,6 +68,8 @@
 \begin{minipage}[t]{.5\textwidth}
 	\raggedright
 	\begin{tabular}{@{}ll@{}}
+	name \& surname: & Luca Maurelli\\
+	sex: & male\\
 	date of birth: & June 30, 1993 \\
 	phone number: & \href{tel:+393408192088}{(+39)~340~8192088} \\
 	e-mail: & \href{mailto:luca.maurelli@unibg.it}{luca.maurelli@unibg.it} \\
@@ -74,9 +78,10 @@
 \end{minipage}% note the use of "%"
 \begin{minipage}[t]{.5\textwidth}
 	\raggedleft
-	ciao ciao \\ 
-	prova \\
-	ciao
+	\includegraphics[height=4cm]{face.jpg}
+	% ciao ciao \\ 
+	% prova \\
+	% ciao
 \end{minipage}
 
 %----------------------------------------------------------------------------------------
@@ -107,25 +112,24 @@
 	University of Bergamo
 	\vspace{6pt}
 	\begin{enumerate}
-		\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 		\item Project SMART4CPPS, funded by Regione Lombardia, led by 4 OdR and 10 local companies.
-		\begin{itemize}
+		\begin{enumerate}
 			\item Management activity of Pilot 1 and Pilot 4
 			\item Pilot 1: Design of a health monitoring system for electromechanical actuators (University of Bergamo, Camozzi)
 			\item Pilot 4: Machine learning algorithms for the zero-defect end-of-line tuning of medium-voltage switches (University of Bergamo, Cosberg, ABB, CNR)
-		\end{itemize}
+		\end{enumerate}
 		\item Project CRYOABLATION:
-		\begin{itemize}
+		\begin{enumerate}
 			\item Model identification of the temperature dynamics in \textit{cryoblation} for atrial fibrillation therapy (Dipartimento di Cardiologia, Ospedale di Seriate)
-		\end{itemize}
+		\end{enumerate}
 		\item Project SP@RK-4.0-I.E.S.:
-		\begin{itemize}
+		\begin{enumerate}
 			\item Data analysis and development of a health monitoring and predictive maintenance system in high performance workcenters (Mandelli spa)
-		\end{itemize}
+		\end{enumerate}
 		\item Project SMI-PREDICTIVE MAINTENANCE:
-		\begin{itemize}
+		\begin{enumerate}
 			\item Design of a predictive maintenance system for beverage packaging machines using accelerometers (SMI Group)
-		\end{itemize}
+		\end{enumerate}
   \end{enumerate}
 \end{minipage}% note the use of "%"
 \hfill\vrule\hfill
@@ -137,25 +141,35 @@
 %----------------------------------------------------------------------------------------
 \vspace{6pt} % Gap between titles
 %----------------------------------------------------------------------------------------
-\textbf{Software Engineer} at Consortium Intellimech\\
-\href{https://www.linkedin.com/company/kilometro-rosso/}{Kilometro Rosso} \hfill Oct 2017 – Apr 2018
-\begin{itemize}
-  	\setlength\itemsep{-0.5em}
-	\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-	\item Project KNOWLEDGIZE, funded by Regione Lombardia, led by Consortium Intellimech, with 2 OdR and 3 local companies.
-	\vspace{-6pt}
-  	\begin{itemize}
-  		\setlength\itemsep{-0.5em}
-		\item Development of a Knowledge Management Web Platform with an Innovative ML Algorithm based on Tag Searching using Django and Google Services (University of Bergamo, University of Brescia, Cosberg, Elettrocablaggi, Vin Service)
-	\end{itemize}
-	\item Development of software applications:
-	\vspace{-6pt}
-  	\begin{itemize}
-  		\setlength\itemsep{-0.5em}
-		\item Push-bottom panel for testing procedures on PLC in C\#
-		\item Monitoring system using industrial communicating protocols MQTT, MTCONNECT, UPC-UA and MODbus in Python
-	\end{itemize}
-\end{itemize}
+
+\noindent
+\begin{minipage}[t]{.8\textwidth}
+	\raggedright
+	\textbf{Software Engineer} at Consortium Intellimech\\
+	\href{https://www.linkedin.com/company/kilometro-rosso/}{Kilometro Rosso}
+	\vspace{6pt}
+	\begin{enumerate}
+		\item Project KNOWLEDGIZE, funded by Regione Lombardia, led by Consortium Intellimech, with 2 OdR and 3 local companies.
+		  \begin{enumerate}
+			\item Development of a Knowledge Management Web Platform with an Innovative ML Algorithm based on Tag Searching using Django and Google Services (University of Bergamo, University of Brescia, Cosberg, Elettrocablaggi, Vin Service)
+		\end{enumerate}
+		\item Development of software applications:
+		  \begin{enumerate}
+			\item Push-bottom panel for testing procedures on PLC in C\#
+			\item Monitoring system using industrial communicating protocols MQTT, MTCONNECT, UPC-UA and MODbus in Python
+		\end{enumerate}
+  \end{enumerate}
+\end{minipage}% note the use of "%"
+\hfill\vrule\hfill
+\begin{minipage}[t]{.16\textwidth}
+	\raggedleft
+	Oct 2017 – Apr 2018
+\end{minipage}
+
+%----------------------------------------------------------------------------------------
+%	NEW PAGE
+%----------------------------------------------------------------------------------------
+\clearpage
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
@@ -173,18 +187,13 @@
 \textit{Development of a library for Mobile Robot Trajectory Control} \hfill Sep 2015
 
 %----------------------------------------------------------------------------------------
-%	NEW PAGE
-%----------------------------------------------------------------------------------------
-\clearpage
-
-%----------------------------------------------------------------------------------------
 %	POST-GRADUATE EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
 \cvsection{post-graduate education}
 Ph.D. \textbf{Courses} in:
 \begin{itemize}	
-	\setlength\itemsep{-12pt}
+	\setlength\itemsep{-3pt}
 	\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 	\item \textit{Nonlinear System Identification} \\
 	% https://scholar.google.it/citations?user=nB_7svEAAAAJ
@@ -212,6 +221,12 @@ Ph.D. \textbf{Courses} in:
 	\item \textit{Statistical Signal Processing in Engineering}\\
 	\textbf{Prof. U. Spagnolini}\\
 	Politecnico of Milan, Italy \hfill 26h, Jan 2020\\
+	\item \textit{Numerical Methods for Optimal Control}\\
+	\textbf{Prof. M. Zanon}\\
+	IMT School for Advanced Studies Lucca, Italy \hfill 30h, May 2020\\
+	\item \textit{Machine Learning: A Computational Intelligence Approach}\\
+	\textbf{Prof. F. Masulli and S. Rovetta}\\
+	University of Genova, Italy \hfill 20h, Jun 2020\\
 \end{itemize}
 
 %----------------------------------------------------------------------------------------
@@ -245,7 +260,14 @@ Ph.D. \textbf{Seminars} in:
 	University of Bergamo, Italy \hfill 1h, Oct 2019\\
 	\item \textit{Kernel-based learning for system identification}\\
 	University of Bergamo, Italy \hfill 1h, Oct 2019\\
+	\item \textit{Set-based methods in estimation and control }\\
+	IFAC2020 workshop \hfill 6h, Jul 2020\\
 \end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	NEW PAGE
+%----------------------------------------------------------------------------------------
+\clearpage
 
 %----------------------------------------------------------------------------------------
 %	TEACHING EXPERIENCE SECTION
@@ -256,8 +278,11 @@ Ph.D. \textbf{Seminars} in:
 \textbf{Lecture Assistant} of the following \textbf{MSc courses} at the University of Bergamo:
 \begin{enumerate}
 	\setlength\itemsep{-3pt}
-	\item \textit{Controlli Automatici} (Advanced Control Systems) \hfill 20h course, Sep 2018 – Dec 2018\\
-	\item \textit{Controlli Automatici} (Advanced Control Systems) \hfill 12h course, Sep 2019 – Dec 2019\\
+	\item \textit{Controlli Automatici} (Advanced Control Systems) A.Y. 2018/2019\hfill italian, 20h, Sep 2018 – Dec 2018\\
+	\item \textit{Controlli Automatici} (Advanced Control Systems) A.Y. 2019/2020\hfill italian, 12h, Sep 2019 – Dec 2019\\
+	\item \textit{Dynamic System Identification} A.Y. 2019/2020\hfill english, 18h, Jan 2020 – Jun 2020\\
+	\item \textit{Controlli Automatici} (Advanced Control Systems) A.Y. 2020/2021\hfill italian, 12h, Jan 2021 – Jun 2021\\
+	\item \textit{Identificazione di modelli ed analisi di dati} A.Y. 2020/2021\hfill italian, 12h, Jan 2021 – Jun 2021
 \end{enumerate}
 
 %----------------------------------------------------------------------------------------
@@ -268,11 +293,27 @@ Ph.D. \textbf{Seminars} in:
 \begin{enumerate}
 	\setlength\itemsep{-3pt}
 	\item \textit{Sviluppo preliminare di un sistema di health monitoring per un attuatore elettromeccanico}\\
-	Advisor: prof. Fabio Previdi \hfill Students: Davide Palazzini, Alen Preda
+	Advisor: prof. F. Previdi \hfill Students: Davide Palazzini, Alen Preda
 	\item \textit{Data-driven health monitoring di attuatori elettromeccanici per automazione industriale}\\
-	Advisor: prof. Fabio Previdi \hfill Students: Davide Presciani, Matteo Gusmini
+	Advisor: prof. F. Previdi \hfill Students: Davide Presciani, Matteo Gusmini
 	\item \textit{Simulatore elettro-termo-meccanico di strisce bimetalliche per interruttori industriali a bassa tensione}\\
-	Advisor: prof. Fabio Previdi \hfill Student: Paolo Pasinetti
+	Advisor: prof. F. Previdi \hfill Student: Paolo Pasinetti
+	\item \textit{Predizione della vita utile residua di valvole elettropneumatiche usando tecniche di machine learning}\\
+	Advisor: prof. F. Previdi \hfill Student: Angela Pomata
+\end{enumerate}
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\cvsection{publications}
+
+\textbf{International conferences}
+\begin{enumerate}
+	\setlength\itemsep{-3pt}
+	\item M. Mazzoleni, M. Scandella, L. Maurelli, F. Previdi.\\
+	\textit{Mechatronics applications of condition monitoring using a statistical change detection method.}\\
+	Accepted for publication to 21st IFAC World Congress, Berlin, Germany, July 12-17, 2020
 \end{enumerate}
 
 \end{document}
