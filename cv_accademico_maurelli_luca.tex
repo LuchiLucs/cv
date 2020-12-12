@@ -11,10 +11,12 @@
 %\usepackage{showframe}
 \usepackage[a4paper,
 			includeheadfoot,
-			top = 0cm,
-			bottom = 1cm,
+			top = 1cm,
+			bottom = 0cm,
 			left = 1cm,
 			right = 1cm]{geometry}
+
+\usepackage{fancyhdr}
 
 % interpreters
 \usepackage[utf8]{inputenc}
@@ -46,6 +48,17 @@
             citecolor = BrickRed,
             anchorcolor = BrickRed]{hyperref}
 
+
+\fancyhead[L]{\textit{Luca Maurelli's Curriculum Vitae}}
+\fancyhead[C]{}
+\fancyhead[R]{\thepage}
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
 \newcommand{\cvsection}[1]{\section*{\centering\normalsize\uppercase{#1}}\vspace{-16pt}\rule{\linewidth}{0.2pt}\vspace{6pt}}
 
 % debug
@@ -54,26 +67,29 @@
 \begin{document}
 % empty header and footer
 % https://tex.stackexchange.com/questions/194423/page-style-plain-vs-empty
-% \pagestyle{empty}
+\pagestyle{empty}
+
 %----------------------------------------------------------------------------------------
-%	TITLE PAGE: PERSONAL DATA
+%	TITLE PAGE
 %----------------------------------------------------------------------------------------
 \centering
 {\huge\textsc{Luca~Maurelli's~Curriculum~Vitae}\par}
 {\textsc{Updated:~}\today\par}
 \raggedright
 \vspace{1cm}
+
 %----------------------------------------------------------------------------------------
-%   BODY 
+%   PERSONAL DATA
 %----------------------------------------------------------------------------------------
+\cvsection{personal data}
 
 \noindent
 \begin{minipage}[t]{.5\textwidth}
 	\raggedright
 	\begin{tabular}{@{}ll@{}}
-	name \& surname: & Luca Maurelli\\
-	sex: & male\\
-	date of birth: & June 30, 1993 \\
+	name surname: & Luca Maurelli\\
+	birthdate: & June 30, 1993 \\
+	birthplace: & Milan, Italy \\
 	phone number: & \href{tel:+393408192088}{(+39)~340~8192088} \\
 	e-mail: & \href{mailto:luca.maurelli@unibg.it}{luca.maurelli@unibg.it} \\
 	location: & \href{https://goo.gl/maps/qSb6hkSyAdgnEt5w7}{Treviglio~(BG),~24047,~Italy}
@@ -81,7 +97,7 @@
 \end{minipage}% note the use of "%"
 \begin{minipage}[t]{.5\textwidth}
 	\raggedleft
-	\includegraphics[height=4cm]{face.jpg}
+	%\includegraphics[height=4cm]{face.jpg}
 	% ciao ciao \\ 
 	% prova \\
 	% ciao
@@ -173,6 +189,7 @@
 %	NEW PAGE
 %----------------------------------------------------------------------------------------
 \clearpage
+\pagestyle{fancy}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
@@ -190,19 +207,13 @@
 \textit{Development of a library for Mobile Robot Trajectory Control} \hfill Sep 2015
 
 %----------------------------------------------------------------------------------------
-%	NEW PAGE
-%----------------------------------------------------------------------------------------
-
-\clearpage
-
-%----------------------------------------------------------------------------------------
 %	POST-GRADUATE EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
 \cvsection{post-graduate education}
 Ph.D. \textbf{Courses} in:
 \begin{itemize}	
-	\setlength\itemsep{-3pt}
+	\setlength\itemsep{-6pt}
 	\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 	% https://scholar.google.it/citations?user=nB_7svEAAAAJ
@@ -251,13 +262,8 @@ Ph.D. \textbf{Courses} in:
 	\textbf{Prof. G. Pillonetto} \hfill 16h, Nov 2020\\
 
 	\item \textit{Applied Linear Algebra} \hfill University of Padova, Italy\\
-	\textbf{Prof. L. Schenat} \hfill 16h, Nov 2020\\
+	\textbf{Prof. L. Schenato} \hfill 16h, Nov 2020\\
 \end{itemize}
-
-%----------------------------------------------------------------------------------------
-%	NEW PAGE
-%----------------------------------------------------------------------------------------
-\clearpage
 
 %----------------------------------------------------------------------------------------
 \vspace{6pt} % Gap between titles
@@ -265,7 +271,7 @@ Ph.D. \textbf{Courses} in:
 
 Ph.D. \textbf{Schools \& Workshops} in:
 \begin{itemize}
-	\setlength\itemsep{-3pt}
+	\setlength\itemsep{-6pt}
 	\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 	\item \textit{EECI-IGSC 2019 -- Model based Fault Diagnosis using a MATLAB Linear Framework} \hfill University of Padova, Italy\\
@@ -280,11 +286,11 @@ Ph.D. \textbf{Schools \& Workshops} in:
 	\item \textit{IFAC 2020 -- Set-based Methods in Estimation and Control} \hfill International Federation of Automatic Control (Virtual)\\
 	\textbf{Proff. R. Paulen, M. E. Villanueva and B. Chachuat} \hfill 6h, Jul 2020\\
 
-	\item \textit{EECI-IGSC 2021 -- From Data to Decisions: the Scenario Approach} \hfill International Graduate School on Control (Virtual)\\
-	\textbf{Proff. M. C. Campi and S. Garatti} \hfill 48h, Feb 2021\\
+	% \item \textit{EECI-IGSC 2021 -- From Data to Decisions: the Scenario Approach} \hfill International Graduate School on Control (Virtual)\\
+	% \textbf{Proff. M. C. Campi and S. Garatti} \hfill 48h, Feb 2021\\
 
-	\item \textit{EECI-IGSC 2021 -- Learning to Control} \hfill International Graduate School on Control (Virtual)\\
-	\textbf{Prof. S. Formentin} \hfill 48h, May 2021\\
+	% \item \textit{EECI-IGSC 2021 -- Learning to Control} \hfill International Graduate School on Control (Virtual)\\
+	% \textbf{Prof. S. Formentin} \hfill 48h, May 2021\\
 
 \end{itemize}
 
@@ -292,19 +298,36 @@ Ph.D. \textbf{Schools \& Workshops} in:
 \vspace{6pt} % Gap between titles
 %----------------------------------------------------------------------------------------
 
+%Ph.D. \textbf{Seminars} in: \textit{Optimization and control of airborne wind energy systems}, \textit{Identification for Control}, \textit{Fault diagnosis application in industry and mechatronics}, \textit{Kernel-based learning for system identification}.
+
 Ph.D. \textbf{Seminars} in:
 \begin{itemize}
-	\setlength\itemsep{-3pt}
+	\setlength\itemsep{-6pt}
 	\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 	\item \textit{Optimization and control of airborne wind energy systems}\\
-	University of Bergamo, Italy \hfill 2h, Dec 2019\\
 	\item \textit{Identification for Control}\\
-	University of Bergamo, Italy \hfill 2h, Nov 2019\\
 	\item \textit{Fault diagnosis application in industry and mechatronics}\\
-	University of Bergamo, Italy \hfill 1h, Dec 2019\\
 	\item \textit{Kernel-based learning for system identification}\\
-	University of Bergamo, Italy \hfill 1h, Dec 2019\\
 \end{itemize}
+
+% Ph.D. \textbf{Seminars} in:
+% \begin{itemize}
+% 	\setlength\itemsep{-3pt}
+% 	\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+% 	\item \textit{Optimization and control of airborne wind energy systems}\\
+% 	University of Bergamo, Italy \hfill 2h, Dec 2019\\
+% 	\item \textit{Identification for Control}\\
+% 	University of Bergamo, Italy \hfill 2h, Nov 2019\\
+% 	\item \textit{Fault diagnosis application in industry and mechatronics}\\
+% 	University of Bergamo, Italy \hfill 1h, Dec 2019\\
+% 	\item \textit{Kernel-based learning for system identification}\\
+% 	University of Bergamo, Italy \hfill 1h, Dec 2019\\
+% \end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	NEW PAGE
+%----------------------------------------------------------------------------------------
+\clearpage
 
 %----------------------------------------------------------------------------------------
 %	TEACHING EXPERIENCE SECTION
@@ -346,12 +369,16 @@ Ph.D. \textbf{Seminars} in:
 \cvsection{publications}
 
 \textbf{International conferences}
-\begin{enumerate}
+\begin{enumerate}[label={[C0{\arabic*}]}]
 	\setlength\itemsep{-3pt}
-	\item M. Mazzoleni, M. Scandella, L. Maurelli, F. Previdi.\\
+	\item M. Mazzoleni, M. Scandella, \textsc{L. Maurelli}, F. Previdi.\\
 	\textit{Mechatronics applications of condition monitoring using a statistical change detection method.}\\
 	Accepted for publication to 21st IFAC World Congress, Berlin, Germany, July 12-17, 2020
+	\item \textsc{L. Maurelli}, M. Mazzoleni, F. Previdi.\\
+	\textit{Modeling and simulation of bimetallic strips in industrial circuit breakers.}\\
+	Submitted to 19th IFAC Symposium on System Identification, (Virtual) Padova, Italy, July 14-16, 2021
 \end{enumerate}
+
 
 \vfill
 {\centering \textbf{Waiver} \par}
