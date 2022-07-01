@@ -1,0 +1,411 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Luca Maurelli CV
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[10pt]{article}
+%\usepackage{showframe}
+\usepackage[a4paper,
+			includeheadfoot,
+			top = 0.5cm,
+			bottom = 0cm,
+			left = 1cm,
+			right = 1cm]{geometry}
+\usepackage{fancyhdr}
+% interpreters
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% language
+\usepackage[english]{babel}
+\usepackage{csquotes}
+\usepackage{microtype}
+% font
+\usepackage{libertine}
+\usepackage{courier}
+\usepackage{fontawesome5}
+% Paragraph indentation: empty line rather than an indent
+\usepackage[parfill]{parskip}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{enumitem}
+%http://ctan.yazd.ac.ir/macros/latex/contrib/enumitem/enumitem.pdf
+\setlist{leftmargin=*}
+\setlist[2]{labelindent=-12pt}
+\setlist[3]{labelindent=-6pt}
+%\setlist[enumerate,1]{label=$\vcenter{\hbox{\tiny$\bullet$}}$,leftmargin=*}
+%\setlist[enumerate,2]{label=--,leftmargin=*}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[allbordercolors = red,
+			colorlinks = true,
+            linkcolor = BrickRed,
+            urlcolor  = BrickRed,
+            citecolor = BrickRed,
+            anchorcolor = BrickRed]{hyperref}
+\usepackage{cleveref}
+\fancyhead[L]{\textit{Luca Maurelli's Curriculum Vitae}}
+\fancyhead[C]{\textsc{Data Scientist | Data Engineer}}
+\fancyhead[R]{\thepage}
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\newcommand{\cvsection}[1]{\section*{\centering\normalsize\uppercase{#1}}\vspace{-16pt}\rule{\linewidth}{0.2pt}\vspace{6pt}}
+% debug
+% \usepackage{showframe}
+\begin{document}
+% empty header and footer
+% https://tex.stackexchange.com/questions/194423/page-style-plain-vs-empty
+\pagestyle{empty}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\noindent
+\begin{minipage}[t]{.7\textwidth}
+	\raggedright
+	{\Huge\textsc{Luca~Maurelli}\par}
+	{\textsc{Data Scientist}\par}
+	{$ $\par}
+	{\textsc{Keywords: }Signal Processing, Prediction \& Filtering, Fault Diagnosis \& Prognosis, Time Series \& Dynamical models, System Identification \& Validation, Visualization\par}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{.3\textwidth}
+	\raggedleft
+	% \begin{tabular}{@{}ll@{}}
+	% 	sex \& pronouns:&\faIcon{male} Male, \faIcon{mars-double} He\textbackslash Him\\
+	% 	birthdate \& birthplace:&June 30, 1993 in Milan, Italy\\
+	% 	contacts:&\faIcon{phone} \href{tel:+393408192088}{(+39)~340~8192088} \faIcon{envelope} \href{mailto:lucamaurelli93@gmail.com}{lucamaurelli93@gmail.com}\\
+	% 	% phone: & \href{tel:+393408192088}{(+39)~340~8192088} \\
+	% 	%e-mail: & \href{mailto:luca.maurelli@unibg.it}{luca.maurelli@unibg.it} \\
+	% 	% e-mail: & \href{mailto:lucamaurelli93@gmail.com}{lucamaurelli93@gmail.com} \\
+	% 	location:&\faIcon{map-marker-alt} \href{https://goo.gl/maps/ir6c5EaAzBuvGFTb6}{Treviglio~(BG),~24047,~Italy}\\
+	% 	\end{tabular}
+	\begin{tabular}[t]{@{}ll@{}}
+		\faIcon{calendar} & June 30, 1993 in Milan, Italy\\
+		\faIcon{phone} & \href{tel:+393408192088}{(+39)~340~8192088}\\
+		\faIcon{envelope} & \href{mailto:lucamaurelli93@gmail.com}{lucamaurelli93@gmail.com}\\
+		\faIcon{map-marker-alt} & \href{https://goo.gl/maps/ir6c5EaAzBuvGFTb6}{Treviglio~(BG),~24047,~Italy}\\
+		\faIcon{linkedin} & \href{https://www.linkedin.com/in/luca-maurelli-07b435152/}{Linkedin}\\
+		\faIcon{github} & \href{https://www.linkedin.com/in/luca-maurelli-07b435152/}{GitHub}\\
+	\end{tabular}
+\end{minipage}%
+%{\textsc{Updated:~}\today\par}
+%\vspace{1cm}
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCES SECTION
+%----------------------------------------------------------------------------------------
+\cvsection{Job Experience}
+\noindent
+\begin{minipage}[t]{.80\textwidth}
+	\textbf{Ph.D. Student} at the \href{https://disa.unibg.it/}{Department of Engineering and Applied Sciences}
+	\begin{enumerate}
+		%\DrawEnumitemLabel
+		\item Theoretical research on the design and estimation of a data-driven direct filters in stochastic frameworks.
+		The proposed approach and the classical solution given by optimal Bayesian filters (KF) is compared in simulation with univariate/multivariate LTI time series and dynamical systems.
+		\item Project \href{https://www.smart4cpps.it/}{SMART4CPPS}, P1 ({\small University of Bergamo, Camozzi}), P4 ({\small University of Bergamo, Cosberg, ABB, CNR}).
+		\begin{enumerate}
+			%\DrawEnumitemLabel
+			\item Management activity and writing of technical reports of P1 and P4.
+			\item Technical activity of Pilot 1: design of a health monitoring system for EM actuators (solenoid valves).
+			\begin{itemize}
+				\item White-box modeling of the electro-magneto-mechanical dynamics.
+				\item Cross-references failure modes, mechanisms and effect analysis and related fault diagnostic variables.
+				\item Ad-hoc signal processing techniques to clean, normalize, and aggregate experimental big data ($\sim 11 \textnormal{M}$).
+				\item Physical-informed features extraction from significant points of the transient current profile focused on the detection of motion plunger impediment and the energy used upon the actuation.
+				\item Development of an online prognostic algorithm to detect the remaining useful life of the system.
+			\end{itemize}
+			\item Technical activity of Pilot 1: design of a health monitoring system for EM actuators (linear cylinders)
+			\begin{itemize}
+				\item Supported selection of sensors for the experimental test bench.
+				\item Design of the test protocol and calendar scheduling of the acquisition and degradation phases.
+				\item Acquisition of experimental data and related assessment of the health state of the system.
+				\item Development of conditional assessment algorithms based on accelerations and current signals using statistical learning routines (Statistical Process Monitoring and Change Point Detection).
+			\end{itemize}
+			\item Technical activity of Pilot 4: zero-defect end-of-line tuning of medium-voltage switches
+			\begin{itemize}
+				\item Ad-hoc data ingestion phase for the experimental temperature and displacement data.
+				\item System identification of the coupled grey-box electro-thermal and black-box thermo-mechanical dynamics of the thermal bimetallic component and validation with experimental data.
+				\item Data augmentation by means of simulating new virtual data. The sampling takes care of the same dependency structure of the experimental data thanks to the statistical Copula distribution.
+				\item Development of an robust iterative algorithm to tune the end-of-line screw and correct to the desirable trip time by means of an hypothesis on the corrective power bounds.
+			\end{itemize}
+		\end{enumerate}
+		\item Publication of international journal papers and patents regarding academic and industrial results, see items from \ref{c2020} to \ref{p2022}.
+	\end{enumerate}
+\end{minipage}% note the use of "%"
+\hspace{.02\textwidth}\vrule\hspace{.02\textwidth}
+\begin{minipage}[t]{.16\textwidth}
+	\raggedleft
+	Oct 2019 --- Sep 2022\\
+	\small University of Bergamo\\
+\end{minipage}% note the use of "%"
+%----------------------------------------------------------------------------------------
+\par\vspace{6pt}
+%----------------------------------------------------------------------------------------
+\noindent
+\begin{minipage}[t]{.80\textwidth}
+	\raggedright
+	\textbf{Research Assistant} at the \href{https://digip.unibg.it/}{Department of Management, Information and Production Engineering}
+	\begin{enumerate}
+		\item Project CRYOABLATION ({\small Dipartimento di Cardiologia, Ospedale di Seriate})
+		\begin{enumerate}
+			\item Modeling of the temperature dynamics in the cryoablation process for atrial fibrillation therapy.
+			\item Model selection using in-sample goodness-of-fit \& complexity tradeoff techniques (FPE-AIC-BIC).
+		\end{enumerate}
+		\item Project SP@RK-4.0-I.E.S. ({\small Mandelli})
+		\begin{enumerate}
+			\item Supported design of a predictive maintenance system for the acquisition of experimental acceleration signals the fault diagnosis of rotating components (bearings) in high performance work-centers
+			%\item Supported design and implementation of a prototype for the acquisition of experimental data in the development of a predictive maintenance system through the analysis of acceleration signals for the fault diagnosis of rotating components (bearings) in high performance work-centers
+		\end{enumerate}
+  \end{enumerate}
+\end{minipage}% note the use of "%"
+\hspace{.02\textwidth}\vrule\hspace{.02\textwidth}
+\begin{minipage}[t]{.16\textwidth}
+	\raggedleft
+	May 2018 --- Sep 2019\\
+	\small University of Bergamo\\
+\end{minipage}% note the use of "%"
+%----------------------------------------------------------------------------------------
+\par\vspace{6pt}
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\noindent
+\begin{minipage}[t]{.80\textwidth}
+	\raggedright
+	\textbf{Researcher \& Software Engineer} at \href{https://www.intellimech.it/}{Consortium Intellimech} (Intership during Master's thesis)
+	\begin{enumerate}
+		\item Project KNOWLEDGIZE ({\small University of Bergamo, University of Brescia, Cosberg, Elettrocablaggi, Ronzoni})
+		\begin{enumerate}
+			\item Development of a web platform for corporate knowledge management using Django backend framework, Bootstrap and JavaScript frontend libraries, and Google cloud services.
+			\item Automation on the creation of "commesse" PDF documents based on user inputs by using LaTex.
+			\item Creation of a smart search engine based on similar tags on content using ML algorithms related to natural language processing through the word2vec algorithm of the Gensim Python library.
+		\end{enumerate}
+		\item Supported development of a monitoring system software prototype in Python:
+		\begin{enumerate}
+			\item Creation of a communication publisher-subscriber infrastructure between gateway and industrial machines through MQTT
+			\item Support to the different communication protocols of the nodes (MQTT, MTCONNECT, UPC-UA, and MODbus) by using Python libraries to parse and encapsulate original messages.
+		\end{enumerate}
+  \end{enumerate}
+\end{minipage}% note the use of "%"
+\hspace{.02\textwidth}\vrule\hspace{.02\textwidth}
+\begin{minipage}[t]{.16\textwidth}
+	\raggedleft
+	{Oct 2017 --- Apr 2018\par}
+	{\small Consortium Intellimech\par}
+\end{minipage}% note the use of "%"
+\par
+%----------------------------------------------------------------------------------------
+%	NEW PAGE
+%----------------------------------------------------------------------------------------
+\clearpage
+\pagestyle{fancy}
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%-------------------------------------------------------------
+\cvsection{Skills \& Tools}
+\textbf{Creation} of scientific documents (reports and papers) using LaTeX and LyX. \textbf{Management} of scientific references with JabRef.
+Scientific \textbf{computation} and analysis with MATLAB (Parallel toolbox, Optimization toolbox) with external numerical modeler (YALMIP) and solvers (Mosek, GUROBI), and Python libraries (numpy and pandas). Used IDE for Python and LaTeX is VS Code. \textbf{Code versioning} with GitHub and Git. Data acquisition HW and SW: NI C-Daq and LabView. Experience with backend framework Django and frontend framework bootstrap. Natural Language Processing with Python library Gensim (vec2word) and Google Cloud Services.
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\vspace{-10pt}
+\cvsection{education}
+\textbf{Ph.D. in Engineering \& Applied Sciences}, University of Bergamo, Italy\\
+\textit{Development of a data-driven direct filter for the design from data filter problem in a stochastic framework} \hfill Oct 1, 2022\\
+
+\vspace{-6pt}
+
+\textbf{Master's degree in Computer Science \& Engineering}, University of Bergamo, Italy \hfill 110L\slash110\\
+\textit{Development of a Knowledge Management Web Platform with an Innovative ML Algorithm based on Tag Searching} \hfill Mar 29, 2018\\
+
+\vspace{-6pt}
+
+\textbf{Bachelor's degree in Computer Science \& Engineering}, University of Bergamo, Italy\hfill 105\slash110\\
+\textit{Development of a library for Mobile Robot Trajectory Control} \hfill Sep 30, 2015\\
+%----------------------------------------------------------------------------------------
+%	POST-GRADUATE EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+% \cvsection{post-graduate education}
+% Ph.D. \textbf{Courses} in:
+% \begin{itemize}	
+% 	\setlength\itemsep{-16pt}
+% 	\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+% 	\vspace{-4pt}
+% 	% https://scholar.google.it/citations?user=nB_7svEAAAAJ
+% 	% https://scholar.google.it/citations?user=-TGDzikAAAAJ
+% 	% https://scholar.google.it/citations?user=rUj9gRgAAAAJ
+% 	% https://scholar.google.it/citations?user=wcXdcwEAAAAJ 
+% 	\item \textit{Nonlinear System Identification}{\tiny{ (Proff. L. Piroddi, S. Formentin, S. Garatti, G. Panzani and L. Fagiano)}} \hfill 48h, Jan 2019, Politecnico of Milan, Italy\\
+% 	\item \textit{Optimization Models and Algorithms}{\tiny Prof. M. T. Vespucci} \hfill 24h, Jul 2019, University of Bergamo, Italy\\
+% 	\item \textit{Advanced Mathematical Methods for Engineering}{\tiny Proff. M. Pedroni and A. Raimondo}
+% 	\hfill 24h, Oct 2019, University of Bergamo, Italy\\
+% 	\item \textit{Advanced Numerical Methods for Engineering}{\tiny Prof. C. Vergara} \hfill 20h, Nov 2019, University of Bergamo, Italy\\
+% 	% https://scholar.google.it/citations?user=-h6RUBsAAAAJ
+% 	\item \textit{Noise and Vibration Control Engineering}{\tiny Prof. N. B. Roozen} \hfill 15h, Nov 2019, University of Brescia, Italy\\
+% 	\item \textit{Statistical Signal Processing in Engineering}{\tiny Prof. U. Spagnolini}
+% 	\hfill 26h, Jan 2020, Politecnico of Milan, Italy\\
+% 	\item \textit{Numerical Methods for Optimal Control}{\tiny Prof. M. Zanon} \hfill 30h, May 2020, IMT School for Advanced Studies Lucca, Italy\\
+% 	\item \textit{Advanced English Course}{\tiny Prof. S. J. Kingshott} \hfill 16h, Jun 2020, University of Bergamo, Italy\\
+% 	\item \textit{Optimization Models and Algorithms}{\tiny Prof. M. T. Vespucci} \hfill 15h, Jun 2020, University of Bergamo, Italy\\
+% 	\item \textit{Advanced methods for system identification}{\tiny Prof. M. Mazzoleni} \hfill 20h, Jul 2020, University of Bergamo, Italy\\
+% 	\item \textit{Model Predictive Control}{\tiny Proff. M. Farina, R. Scattolini and L. Fagiano} \hfill 26h, Sep 2020, Politecnico of Milan, Italy\\
+% 	\item \textit{Algorithmic Game Theory}{\tiny Prof. N. Gatti and Dr. A. Marchesi} \hfill 16h, Oct 2020, University of Bergamo, Italy\\
+% 	\item \textit{Applied Functional Analysis and Machine Learning}{\tiny Prof. G. Pillonetto} \hfill 16h, Nov 2020, University of Padova, Italy\\
+% 	\item \textit{Applied Linear Algebra}{\tiny Prof. L. Schenato} \hfill 16h, Nov 2020, University of Padova, Italy\\
+% 	\item \textit{Feedback Control in Finance}{\tiny Prof. S. Formentin} \hfill 25h, Mar 2021, Politecnico of Milan, Italy\\
+% \end{itemize}
+% Ph.D. \textbf{Schools \& Workshops} in:
+% \begin{itemize}
+% 	\setlength\itemsep{-8pt}
+% 	\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+% 	\vspace{-4pt}
+% 	\item \textit{EECI-IGSC 2019 -- Model based Fault Diagnosis using a MATLAB Linear Framework} \hfill 48h, Mar 2019, University of Padova, Italy\\
+% 	\vspace{-4pt}{\tiny Proff. A. Varga and D. Ossmann}
+% 	\item \textit{Machine Learning: A Computational Intelligence Approach} \hfill 20h, Jun 2020, University of Genova, Italy\\
+% 	\vspace{-4pt}{\tiny Proff. F. Masulli and S. Rovetta}
+% 	\item \textit{RegML 2020 -- Regularization Methods for Machine Learning} \hfill 20h, Jun 2020, University of Genova, Italy\\
+% 	\vspace{-4pt}{\tiny Prof. L. Rosasco}
+% 	\item \textit{IFAC 2020 -- Set-based Methods in Estimation and Control} \hfill 6h, Jul 2020, IFAC (Virtual)\\
+% 	\vspace{-4pt}{\tiny Proff. R. Paulen, M. E. Villanueva and B. Chachuat}
+% 	\item \textit{SPRING-ID 2021 -- Data-driven Model Learning of Dynamic Systems} \hfill 20h, Apr 2021, École de Lyon (Virtual)\\
+% 	\vspace{-4pt}{\tiny Proff. B. Xavier and P. Van den Hof}
+% 	\item \textit{EECI-IGSC 2021 -- From Data to Decisions: the Scenario Approach} \hfill 48h, Feb 2021, IGSC (Virtual)\\
+% 	\vspace{-4pt}{\tiny Proff. M. C. Campi and S. Garatti}
+% 	\item \textit{EECI-IGSC 2021 -- Learning to Control} \hfill 48h, May 2021, IGSC (Virtual)\\
+% 	\vspace{-4pt}{\tiny Prof. S. Formentin}
+% \end{itemize}
+% %Ph.D. \textbf{Seminars} in: \textit{Optimization and control of airborne wind energy systems}, \textit{Identification for Control}, \textit{Fault diagnosis application in industry and mechatronics}, \textit{Kernel-based learning for system identification}.
+% Ph.D. \textbf{Seminars} in:
+% \begin{itemize}
+% 	\setlength\itemsep{-16pt}
+% 	\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+% 	\vspace{-4pt}
+% 	\item \textit{Optimization and control of airborne wind energy systems}\\
+% 	\item \textit{Identification for Control}\\
+% 	\item \textit{Fault diagnosis application in industry and mechatronics}\\
+% 	\item \textit{Kernel-based learning for system identification}\\
+% \end{itemize}
+%----------------------------------------------------------------------------------------
+\vspace{-20pt}
+%----------------------------------------------------------------------------------------
+%	TEACHING EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\cvsection{teaching experience}
+\textbf{Lecture Assistant} of the following \textbf{MSc courses} at the University of Bergamo:
+\vspace{-6pt}
+\begin{enumerate}
+	\setlength\itemsep{-16pt}
+	\item \textit{Controlli Automatici} A.Y. 2018/2019 \hfill italian \textbf{exercises}, 20h, Sep – Dec 2018\\
+	\item \textit{Controlli Automatici} A.Y. 2019/2020 \hfill italian \textbf{exercises/lectures}, 12h, Sep – Dec 2019\\
+	\item \textit{Dynamic System Identification} A.Y. 2019/2020 \hfill english \textbf{exercises}, 18h, Jan – Jun 2020\\
+	\item \textit{Controlli Automatici} A.Y. 2020/2021 \hfill italian \textbf{exercises}, 12h, Jan – Jun 2021\\
+	\item \textit{Identificazione dei Modelli ed Analisi dei Dati} A.Y. 2020/2021 \hfill italian \textbf{exercises}, 12h, Jan – Jun 2021\\
+	\item \textit{Controlli Automatici} A.Y. 2021/2022 \hfill italian \textbf{exercises}, 12h, Sep – Dec 2021\\
+	\item \textit{Identificazione dei Modelli ed Analisi dei Dati} A.Y. 2021/2022 \hfill italian \textbf{lectures}, 16h, Jan – Jun 2021
+\end{enumerate}
+
+%----------------------------------------------------------------------------------------
+\vspace{6pt} % Gap between titles
+%----------------------------------------------------------------------------------------
+
+\textbf{Co-advisor} of the following \textbf{MSc theses} at the University of Bergamo:
+\vspace{-6pt}
+\begin{enumerate}
+	\setlength\itemsep{-16pt}
+	\item \textit{Sviluppo preliminare di un sistema di health monitoring per un attuatore elettromeccanico}\hfill{\scriptsize (Davide Palazzini, Alen Preda)} Mar 2019\\
+	\item \textit{Data-driven health monitoring di attuatori elettromeccanici per automazione industriale}\hfill{\scriptsize(Davide Presciani, Matteo Gusmini)} Dec 2019\\
+	\item \textit{Simulatore elettro-termo-meccanico di strisce bimetalliche per interruttori industriali a bassa tensione}\hfill{\scriptsize(Paolo Pasinetti)} Dec 2019\\
+	\item \textit{Predizione della vita utile residua di valvole elettropneumatiche usando tecniche di machine learning}\hfill{\scriptsize(Angela Pomata)} Apr 2020\\
+	\item \textit{Modellazione, simulazione ed auto-tuning di fine linea per interruttori industriali a bassa tensione}\hfill{\scriptsize(Simone Zanni)} Mar 2021\\
+	\item \textit{Progettazione di un algoritmo data driven
+	per la predizione della vita utile residua di
+	valvole elettropneumatiche}\hfill{\scriptsize(Simone Sudati)} Jul 2021\\
+	\item \textit{Misure di temperatura per la stima della vita utile residua di valvole industriali}\hfill{\scriptsize(Michele Brillante)} Mar 2022\\
+\end{enumerate}
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+\vspace{-20pt}
+\cvsection{publications}
+
+\textbf{International conferences}
+\begin{enumerate}[label={[C0{\arabic*}]}]
+	\setlength\itemsep{-3pt}
+	\item \label{c2020}M. Mazzoleni, M. Scandella, \textsc{L. Maurelli}, F. Previdi.\\
+	\textit{Mechatronics applications of condition monitoring using a statistical change detection method}\\
+	21st IFAC World Congress, Berlin, Germany, July 12-17, 2020 \hfill \href{https://doi.org/10.1016/j.ifacol.2020.12.100}{DOI}
+	\item \label{c2021}\textsc{L. Maurelli}, M. Mazzoleni, F. Previdi.\\
+	\textit{Modeling and simulation of bimetallic strips in industrial circuit breakers}\\
+	19th IFAC Symposium on System Identification, (Virtual) Padova, Italy, July 14-16, 2021 \hfill \href{https://doi.org/10.1016/j.ifacol.2021.08.460}{DOI}
+\end{enumerate}
+
+\textbf{International journals}
+\begin{enumerate}[label={[J0{\arabic*}]}]
+	\setlength\itemsep{-3pt}
+	\item \label{j2022}\textsc{L. Maurelli}, M. Mazzoleni, A. Camisani, F. Previdi.\\
+	\textit{Physics-informed Remaining Useful Life estimation of cost-effective solenoid
+	valves using significant points of the excitation current}\\
+	Finished - to be submitted
+	\item \label{j02}\textsc{L. Maurelli}, M. Mazzoleni, F. Previdi.\\
+	\textit{Direct Filtering}\\
+	In preparation
+\end{enumerate}
+
+\textbf{International patents}
+\begin{enumerate}[label={[P0{\arabic*}]}]
+	\setlength\itemsep{-3pt}
+	\item \label{p2022}\textsc{L. Maurelli}, M. Mazzoleni, A. Camisani, F. Previdi.\\
+	\textit{2022 --- Brevetto con Camozzi Automation}\\
+\end{enumerate}
+%----------------------------------------------------------------------------------------
+%	NEW PAGE
+%----------------------------------------------------------------------------------------
+%\clearpage
+%----------------------------------------------------------------------------------------
+%	ABOUT ME SECTION
+%----------------------------------------------------------------------------------------
+
+\cvsection{Presentation letter}
+% Dear John Snow,
+
+% As XYZ Company looks to grow its operations throughout Italy, my experience in data modeling and visualization, as well as my background in programming, would make a great fit for the Data Scientist position.
+
+\textbf{About me:}
+I like Linux and have experience with the ArchLinux OS. I am interested in personal finance, savings and investments through passive and factor strategies using Exchange Traded Funds. Also, I like both practicing and teaching Badminton as well as self-programming strength training by weight lifting in the gym. I enjoy learning photograph and spending time post-processing pictures.
+
+% I found myself spending time hacking into the ArchLinux OS in order to learn what different pieces of software are meant to do and how they work together.
+% Next, I liked to customize them to my user-experience.
+% This reflects part of my proficiency philosophy about micro-management to dig vertically into stuff, optimizing all that I am able to see and touch.
+
+% On the other hand, in the context of personal finance and investment decisions, I had the need (or pleasure) to consider this learn-and-optimize process with a new perspective.
+% Now, the current state of my finances, my target goal, and the time horizon have my priority.
+% I can not deal with micro-management decisions: there are too many variables to take into account. I have to set my boundaries and be robust.
+
+% Keywords of my philosophy are efficiency and efficacy. The worst-scenario is that it takes trust and time, and sometimes that is not an option. The good news is that working with people, by sharing ideas and discussing together, helps me a lot to find the sweet-spot to be successful.
+
+\textbf{About work:}
+During my education, I got interested in the engineering of the information process. I 
+
+
+I am interested in signal processing, in particular in data cleaning (outliers and anomalies detection) and transformation techniques (normalization and features selection/extraction/engineering). I like to model time series and dynamic systems in order to solve prediction, forecasting, and filtering problems. I invest time in data visualization to provide an effective way to explore data or to provide powerful insights on data.
+% I love learning best practices for \textit{Data Visualization}, especially when writing scientific reports using LaTeX or presentations using PowerPoint.
+
+% I'm also interested in prediction, forecasting, and filtering of time series and static/dynamical models.
+% To this end, I like educating myself about the \textit{Bayesian} formulations.
+
+% Concerning data analytics and its processes, I like investing time studying also \textit{Data Cleaning}, \textit{Data Pre-Processing}, \textit{Data Processing} solutions. 
+
+Please feel free to contact me if you have any questions.
+I appreciate your time and consideration.
+
+Sincerely, Luca Maurelli
+
+%----------------------------------------------------------------------------------------
+%	WAIVER
+%----------------------------------------------------------------------------------------
+
+\vfill
+{\centering \textbf{Waiver} \par}
+{\small I authorize the treatment of my personal data in compliance with the Italian Legislative Decree 196/2003 and the article GDPR 679/16 - “European regulation on the protection of personal data”}
+
+\end{document}
