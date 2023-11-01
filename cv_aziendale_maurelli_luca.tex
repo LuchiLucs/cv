@@ -44,7 +44,7 @@
             anchorcolor = BrickRed]{hyperref}
 \usepackage{cleveref}
 \fancyhead[L]{\textit{Luca Maurelli's Curriculum Vitae}}
-\fancyhead[C]{\textsc{Data Scientist | Data Engineer}}
+\fancyhead[C]{\textsc{Data Engineer}}
 \fancyhead[R]{\thepage}
 \fancyfoot[L]{}
 \fancyfoot[C]{}
@@ -65,9 +65,15 @@
 \begin{minipage}[t]{.7\textwidth}
 	\raggedright
 	{\Huge\textsc{Luca~Maurelli}\par}
-	{\textsc{Data Scientist | Data Engineer}\par}
+	{\textsc{Data Engineer}\par}
 	{$ $\par}
+<<<<<<< HEAD
 	{\textsc{Keywords: }Signal Processing, Prediction \& Filtering, Fault Diagnosis \& Prognosis, Time Series \& Dynamical models, System Identification \& Validation, Data Visualization Techniques\par}
+=======
+	{\textsc{Keywords: }Signal Processing, Prediction \& Filtering, Fault Diagnosis \& Prognosis, Time Series \& Dynamical models, System Identification \& Validation, Visualization\par}
+    {$ $\par}
+    {\textsc{Skills: }Python, Docker\par}
+>>>>>>> a8c295bc134d9b22cf87ceba55038fc4e93430df
 \end{minipage}%
 \hfill
 \begin{minipage}[t]{.3\textwidth}
@@ -99,14 +105,17 @@
 \noindent
 \begin{minipage}[t]{.80\textwidth}
 	\raggedright
-	\textbf{Data Scientist \& Data Engineer} at \href{https://en.digitalmechatronics.camozzi.com/}{Camozzi Digital \& Mechatronics}
+	\textbf{Data Engineer} at \href{https://en.digitalmechatronics.camozzi.com/}{Camozzi Digital \& Mechatronics}
 	\begin{enumerate}
-		\item Development of a common Digital Monitoring System (DRM) in Python for Camozzi Group companies:
+		\item Development of a common Digital Monitoring System in Python for Camozzi Group companies:
 		\begin{enumerate}
-			\item Cost-optimization for the deployment of cloud and on-premise solutions with different cloud providers
-			\item Development and optimization of ETL pipelines w.r.t computational and memory resources
-			\item Transition of the architecture to microservices through Docker and Kubernetes technologies.
-			\item Development and review of statistical algorithms related to manufactoring products
+			\item \textasciitilde 2x cost reduction of time-scheduled Azure cloud deployments with server-less computation.
+   		\item \textasciitilde 2x data-lake storage reduction with binary compressed columnar-based and row-based file formats.
+			\item \textasciitilde 100x speedup of ETL IO-bound pipelines through asyncio support.
+    	  \item Optimization of Python code w.r.t CPU/RAM resources by exploiting vectorization computing.
+            \item Migration to IaC through ARM Azure templates.
+			\item Transition of a monolith architecture to micro-services through Docker technology.
+			\item Review of statistical algorithms related to manufacturing products
 		\end{enumerate}
   \end{enumerate}
 \end{minipage}% note the use of "%"
@@ -174,7 +183,7 @@
 		\item Project CRYOABLATION ({\small Dipartimento di Cardiologia, Ospedale di Seriate})
 		\begin{enumerate}
 			\item Modeling of the temperature dynamics in the cryoablation process for atrial fibrillation therapy.
-			\item Model selection using in-sample goodness-of-fit \& complexity tradeoff techniques (FPE-AIC-BIC).
+			\item Model selection using in-sample goodness-of-fit \& complexity trade-off techniques (FPE-AIC-BIC).
 		\end{enumerate}
 		\item Project SP@RK-4.0-I.E.S. ({\small Mandelli})
 		\begin{enumerate}
