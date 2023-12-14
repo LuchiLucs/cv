@@ -65,15 +65,11 @@
 \begin{minipage}[t]{.7\textwidth}
 	\raggedright
 	{\Huge\textsc{Luca~Maurelli}\par}
-	{\textsc{Data Engineer}\par}
+	{\textsc{Data Engineer | Data Scientist}\par}
 	{$ $\par}
-<<<<<<< HEAD
-	{\textsc{Keywords: }Signal Processing, Prediction \& Filtering, Fault Diagnosis \& Prognosis, Time Series \& Dynamical models, System Identification \& Validation, Data Visualization Techniques\par}
-=======
 	{\textsc{Keywords: }Signal Processing, Prediction \& Filtering, Fault Diagnosis \& Prognosis, Time Series \& Dynamical models, System Identification \& Validation, Visualization\par}
     {$ $\par}
-    {\textsc{Skills: }Python, Docker\par}
->>>>>>> a8c295bc134d9b22cf87ceba55038fc4e93430df
+    {\textsc{Skills: }Python, Docker, pyarrow, pandas\par}
 \end{minipage}%
 \hfill
 \begin{minipage}[t]{.3\textwidth}
@@ -107,15 +103,15 @@
 	\raggedright
 	\textbf{Data Engineer} at \href{https://en.digitalmechatronics.camozzi.com/}{Camozzi Digital \& Mechatronics}
 	\begin{enumerate}
-		\item Development of a common Digital Monitoring System in Python for Camozzi Group companies:
+		\item Application Mantainer of a Digital Monitoring System in Python for Camozzi Group companies:
 		\begin{enumerate}
 			\item \textasciitilde 2x cost reduction of time-scheduled Azure cloud deployments with server-less computation.
    		\item \textasciitilde 2x data-lake storage reduction with binary compressed columnar-based and row-based file formats.
 			\item \textasciitilde 100x speedup of ETL IO-bound pipelines through asyncio support.
     	  \item Optimization of Python code w.r.t CPU/RAM resources by exploiting vectorization computing.
-            \item Migration to IaC through ARM Azure templates.
-			\item Transition of a monolith architecture to micro-services through Docker technology.
-			\item Review of statistical algorithms related to manufacturing products
+            \item Migration computing infrastructure to IaC through Azure ARM and Terraform.
+			\item Dockerization of ETL pipelines, DevOps CI build and push containers to Azure Container Registry and workflow orchestration with Azure Logic App
+			\item Researching time and frequency domain signal processing tecniques for vibrational data.
 		\end{enumerate}
   \end{enumerate}
 \end{minipage}% note the use of "%"
@@ -229,11 +225,6 @@
 %----------------------------------------------------------------------------------------
 %	NEW PAGE
 %----------------------------------------------------------------------------------------
-<<<<<<< HEAD
-\clearpage
-\pagestyle{fancy}
-
-=======
 % \clearpage
 % \pagestyle{fancy}
 % %----------------------------------------------------------------------------------------
@@ -242,25 +233,19 @@
 % \cvsection{Skills \& Tools}
 % \textbf{Creation} of scientific documents (reports and papers) using LaTeX and LyX. \textbf{Management} of scientific references with JabRef.
 % Scientific \textbf{computation} and analysis with MATLAB (Parallel toolbox, Optimization toolbox) with external numerical modeler (YALMIP) and solvers (Mosek, GUROBI), and Python libraries (numpy and pandas). Used IDE for Python and LaTeX is VS Code. \textbf{Code versioning} with GitHub and Git. Data acquisition HW and SW: NI C-Daq and LabView. Experience with backend framework Django and frontend framework bootstrap. Natural Language Processing with Python library Gensim (vec2word) and Google Cloud Services.
->>>>>>> b7472cd98d1a90d53783e25128f503d1f3526a90
 %----------------------------------------------------------------------------------------
 %	EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 \cvsection{education}
 \textbf{Ph.D. in Engineering \& Applied Sciences}, University of Bergamo, Italy\\
-\textit{Development of a data-driven direct filter for the design from data filter problem in a stochastic framework} \hfill June , 2023\\
+\textit{Learning to filtering: a comparison of data-driven solutions to the filtering design problem} \hfill Sep 29, 2023\\
 
 \vspace{-10pt}
 
 \textbf{Master's degree in Computer Science \& Engineering}, University of Bergamo, Italy \hfill 110L\slash110\\
 \textit{Development of a Knowledge Management Web Platform with an Innovative ML Algorithm based on Tag Searching} \hfill Mar 29, 2018\\
 
-<<<<<<< HEAD
 \vspace{-10pt}
-
-=======
-\vspace{-6pt}
->>>>>>> b7472cd98d1a90d53783e25128f503d1f3526a90
 \textbf{Bachelor's degree in Computer Science \& Engineering}, University of Bergamo, Italy\hfill 105\slash110\\
 \textit{Development of a library for Mobile Robot Trajectory Control} \hfill Sep 30, 2015\\
 %----------------------------------------------------------------------------------------
@@ -384,32 +369,17 @@
 	\item \label{j2022}\textsc{L. Maurelli}, M. Mazzoleni, A. Camisani, F. Previdi.\\
 	\textit{Physics-informed Remaining Useful Life estimation of cost-effective solenoid
 	valves using significant points of the excitation current}\\
-<<<<<<< HEAD
 	Finished - to be submitted (pending patent)
-	\item \label{j02}\textsc{L. Maurelli}, M. Mazzoleni, F. Previdi.\\
-	\textit{A direct approach to the filter design from data problem of
-	discrete-time LTI systems and comparison with the classical
-	solution estimating noise covariance matrices}\\
-	Finished - to be submitted
-=======
-	Finished - to be submitted, pending patent
-	% \item \label{j02}\textsc{L. Maurelli}, M. Mazzoleni, F. Previdi.\\
-	% \textit{Direct Filtering}\\
-	% In preparation
->>>>>>> b7472cd98d1a90d53783e25128f503d1f3526a90
+	\item \label{j02}\textsc{L. Maurelli}, M. Mazzoleni, S. Formentin, F. Previdi.\\
+	\textit{A comparison of indirect and direct filter designs from data for LTI systems: the effect of unknown noise covariance matrices}\\
+	2023 - Submitted
 \end{enumerate}
 \textbf{International patents}
 \begin{enumerate}[label={[P0{\arabic*}]}]
 	\setlength\itemsep{-3pt}
-<<<<<<< HEAD
-	\item \label{p2022}\textsc{L. Maurelli}, F. Previdi. (University of Bergamo), (Camozzi Automation)\\
-	\textit{12/07/2022 --- Algoritmo data-driven per la predizione della vita utile
-	residua di valvole elettropneumatiche}\\
-=======
 	\item \label{p2022}\textsc{L. Maurelli}, M. Mazzoleni, A. Camisani, F. Previdi.\\
 	\textit{Camozzi Automation}\\
 	2022 - Pending
->>>>>>> b7472cd98d1a90d53783e25128f503d1f3526a90
 \end{enumerate}
 %----------------------------------------------------------------------------------------
 %	NEW PAGE
@@ -436,13 +406,8 @@ Data acquisition HW and SW: NI C-Daq and LabView. Experience with backend framew
 
 % % As XYZ Company looks to grow its operations throughout Italy, my experience in data modeling and visualization, as well as my background in programming, would make a great fit for the Data Scientist position.
 
-<<<<<<< HEAD
-%\textbf{About me:}
-%I like Linux and have experience with the ArchLinux OS. I am interested in personal finance, savings and investments through passive and factor strategies using Exchange Traded Funds. Also, I like both practicing and teaching Badminton as well as self-programming strength training by weight lifting in the gym. I enjoy learning photograph and spending time post-processing pictures.
-=======
 % \textbf{About me:}
 % I like Linux and have experience with the ArchLinux OS. I am interested in personal finance, savings and investments through passive and factor strategies using Exchange Traded Funds. Also, I like both practicing and teaching Badminton as well as self-programming strength training by weight lifting in the gym. I enjoy learning photograph and spending time post-processing pictures.
->>>>>>> b7472cd98d1a90d53783e25128f503d1f3526a90
 
 % % I found myself spending time hacking into the ArchLinux OS in order to learn what different pieces of software are meant to do and how they work together.
 % % Next, I liked to customize them to my user-experience.
@@ -454,38 +419,21 @@ Data acquisition HW and SW: NI C-Daq and LabView. Experience with backend framew
 
 % % Keywords of my philosophy are efficiency and efficacy. The worst-scenario is that it takes trust and time, and sometimes that is not an option. The good news is that working with people, by sharing ideas and discussing together, helps me a lot to find the sweet-spot to be successful.
 
-<<<<<<< HEAD
-%\textbf{About work:}
-%During my education, I got interested in the engineering of the information process. I 
-
-
-%I am interested in signal processing, in particular in data cleaning (outliers and anomalies detection) and transformation techniques (normalization and features selection/extraction/engineering). I like to model time series and dynamic systems in order to solve prediction, forecasting, and filtering problems. I invest time in data visualization to provide an effective way to explore data or to provide powerful insights on data.
-% I love learning best practices for \textit{Data Visualization}, especially when writing scientific reports using LaTeX or presentations using PowerPoint.
-=======
 % \textbf{About work:}
 % During my education, I got interested in the engineering of the information process. I 
 
-
 % I am interested in signal processing, in particular in data cleaning (outliers and anomalies detection) and transformation techniques (normalization and features selection/extraction/engineering). I like to model time series and dynamic systems in order to solve prediction, forecasting, and filtering problems. I invest time in data visualization to provide an effective way to explore data or to provide powerful insights on data.
 % % I love learning best practices for \textit{Data Visualization}, especially when writing scientific reports using LaTeX or presentations using PowerPoint.
->>>>>>> b7472cd98d1a90d53783e25128f503d1f3526a90
 
 % % I'm also interested in prediction, forecasting, and filtering of time series and static/dynamical models.
 % % To this end, I like educating myself about the \textit{Bayesian} formulations.
 
 % % Concerning data analytics and its processes, I like investing time studying also \textit{Data Cleaning}, \textit{Data Pre-Processing}, \textit{Data Processing} solutions. 
 
-<<<<<<< HEAD
-%Please feel free to contact me if you have any questions.
-%I appreciate your time and consideration.
-
-%Sincerely, Luca Maurelli
-=======
 % Please feel free to contact me if you have any questions.
 % I appreciate your time and consideration.
 
 % Sincerely, Luca Maurelli
->>>>>>> b7472cd98d1a90d53783e25128f503d1f3526a90
 
 Buongiorno,
 
@@ -522,13 +470,7 @@ Luca Maurelli
 %----------------------------------------------------------------------------------------
 %	WAIVER
 %----------------------------------------------------------------------------------------
-<<<<<<< HEAD
-{\centering \textbf{Waiver} \par}
-{\small I authorize the treatment of my personal data in compliance with the Italian Legislative Decree 196/2003 and the article GDPR 679/16 - “European regulation on the protection of personal data”}
-\end{document}
-=======
 \vfill
 {\centering \textbf{Waiver} \par}
 {\small I authorize the treatment of my personal data in compliance with the Italian Legislative Decree 196/2003 and the article GDPR 679/16 - “European regulation on the protection of personal data”}
 \end{document}
->>>>>>> b7472cd98d1a90d53783e25128f503d1f3526a90
